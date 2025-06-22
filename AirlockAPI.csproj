@@ -4,14 +4,126 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <ItemGroup>
     <Reference Include="0Harmony">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\net6\0Harmony.dll</HintPath>
     </Reference>
+    <Reference Include="Il2CppFusion.Common">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2CppFusion.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppFusion.Realtime">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2CppFusion.Realtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppFusion.Runtime">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2CppFusion.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppFusion.Scripts">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2CppFusion.Scripts.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppFusion.Sockets">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2CppFusion.Sockets.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppInterop.Common">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\net6\Il2CppInterop.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppInterop.Generator">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\net6\Il2CppInterop.Generator.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppInterop.HarmonySupport">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\net6\Il2CppInterop.HarmonySupport.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppInterop.Runtime">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\net6\Il2CppInterop.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2Cppmscorlib">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2Cppmscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppPhoton3Unity3D">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2CppPhoton3Unity3D.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppPhotonRealtime">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2CppPhotonRealtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppPhotonVoice">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2CppPhotonVoice.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppPhotonVoice.API">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2CppPhotonVoice.API.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppPhotonVoice.Fusion">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2CppPhotonVoice.Fusion.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSG.Airlock">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2CppSG.Airlock.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSG.Core">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2CppSG.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSG.EosSDK2">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2CppSG.EosSDK2.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSG.FusionSimulator">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2CppSG.FusionSimulator.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSG.GlobalEvents">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2CppSG.GlobalEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSG.LightTween">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2CppSG.LightTween.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSG.LightUI">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2CppSG.LightUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSG.Platform">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2CppSG.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSG.Platform.Airlock3D">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2CppSG.Platform.Airlock3D.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSG.Platform.Oculus">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2CppSG.Platform.Oculus.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSG.Platform.QADebug">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2CppSG.Platform.QADebug.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSG.Platform.SimulatedXR">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2CppSG.Platform.SimulatedXR.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSG.Platform.Steam">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2CppSG.Platform.Steam.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSG.PlayerLoops">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2CppSG.PlayerLoops.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSG.SkuBuild">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2CppSG.SkuBuild.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSG.SkuBuild.Oculus">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2CppSG.SkuBuild.Oculus.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSG.SkuBuild.Steam">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2CppSG.SkuBuild.Steam.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSG.SoundCore">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2CppSG.SoundCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSG.VAT">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2CppSG.VAT.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSG.Vignettitor">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2CppSG.Vignettitor.dll</HintPath>
+    </Reference>
     <Reference Include="MelonLoader">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\net6\MelonLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
   </ItemGroup>
 
