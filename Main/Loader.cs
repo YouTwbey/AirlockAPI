@@ -1,31 +1,28 @@
 ﻿using AirlockAPI.Attributes;
-using AirlockAPI.Main;
 using AirlockAPI.Managers;
 using MelonLoader;
 using System.Reflection;
 
-[assembly: MelonInfo(typeof(Loader), "AirlockAPI", "1.0.0", "YouTubey")]
-
 namespace AirlockAPI.Main
 {
-    public class Loader : MelonPlugin
+    internal class Loader : MelonPlugin
     {
-        public override void OnLateInitializeMelon()
+        public override void OnApplicationStarted() 
         {
-            MelonBase[] assemblies = MelonAssembly.LoadedMelons.ToArray();
+            MelonBase[] melons = MelonBase.RegisteredMelons.ToArray();
 
-            foreach (MelonBase assembly in assemblies)
+            foreach (MelonBase melon in melons)
             {
-                Assembly dll = assembly.MelonAssembly.Assembly;
+                Assembly dll = melon.MelonAssembly.Assembly;
                 if (dll != null)
                 {
                     foreach (Type type in dll.GetTypes())
                     {
-                        MethodInfo[] methods = type.GetMethods(BindingFlags.Static | BindingFlags.Public);
+                        MethodInfo[] methods = type.GetMethods(BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic);
 
                         foreach (MethodInfo method in methods)
                         {
-                            AirlockRpc? rpc = method.GetCustomAttribute<AirlockRpc>();
+                            AirlockRpc rpc = method.GetCustomAttribute<AirlockRpc>();
 
                             if (rpc != null)
                             {

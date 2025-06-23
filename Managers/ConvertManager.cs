@@ -3,7 +3,7 @@ using Il2CppSystem.IO;
 
 namespace AirlockAPI.Managers
 {
-    public static class ConvertManager
+    internal static class ConvertManager
     {
         public static Il2CppArrayBase<PlayerRef> PlayerIEnumeratorToArray<PlayerRef>(this Il2CppSystem.Collections.Generic.IEnumerable<PlayerRef> source)
         {

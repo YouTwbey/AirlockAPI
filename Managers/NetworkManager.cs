@@ -10,7 +10,7 @@ using UnityEngine;
 
 namespace AirlockAPI.Managers
 {
-    public class NetworkManager
+    public static class NetworkManager
     {
         internal static AirlockNetworkRunner Network;
 
@@ -180,7 +180,7 @@ namespace AirlockAPI.Managers
                         if (host != sender) return;
                     }
 
-                    if (args[args.Length - 1] is not AirlockRpcInfo)
+                    if (args[args.Length - 1] is AirlockRpcInfo) { } else
                     {
                         ParameterInfo[] param = method.GetParameters();
 

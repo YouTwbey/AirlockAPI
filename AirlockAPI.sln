@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36202.13 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirlockAPI", "AirlockAPI.csproj", "{77018FCC-3DB2-4808-9031-7DAF4E049A0A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirlockAPI", "AirlockAPI.csproj", "{3B465BA3-F71E-47BC-9409-484E68B2E315}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{77018FCC-3DB2-4808-9031-7DAF4E049A0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{77018FCC-3DB2-4808-9031-7DAF4E049A0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{77018FCC-3DB2-4808-9031-7DAF4E049A0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{77018FCC-3DB2-4808-9031-7DAF4E049A0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B465BA3-F71E-47BC-9409-484E68B2E315}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B465BA3-F71E-47BC-9409-484E68B2E315}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B465BA3-F71E-47BC-9409-484E68B2E315}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B465BA3-F71E-47BC-9409-484E68B2E315}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {34224FB7-F792-4973-9DC6-84BA4B3A0DA0}
+		SolutionGuid = {B46D5B1D-E84E-483B-963E-067A1B5DC2EE}
 	EndGlobalSection
 EndGlobal

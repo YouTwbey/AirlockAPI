@@ -3,7 +3,7 @@ using static MelonLoader.MelonLogger;
 
 namespace AirlockAPI.Debug
 {
-    internal class Logging
+    internal static class Logging
     {
         public static void Log(string message)
         {
@@ -28,21 +28,21 @@ namespace AirlockAPI.Debug
         public static void Debug_Log(string message)
         {
 #if DEBUG
-            MelonLogger.Msg("[DEBUG] " + message);
+            Msg("[DEBUG] " + message);
 #endif
         }
 
         public static void Debug_Warn(string message)
         {
 #if DEBUG
-            MelonLogger.Warning("[DEBUG] " + message);
+            Warning("[DEBUG] " + message);
 #endif
         }
 
         public static void Debug_Error(string message)
         {
 #if DEBUG
-            MelonLogger.Error("[DEBUG] " + message);
+            Error("[DEBUG] " + message);
 #endif
         }
     }

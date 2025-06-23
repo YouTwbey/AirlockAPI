@@ -15,5 +15,10 @@ namespace AirlockAPI.Attributes
             RpcTarget = rpcTarget;
             RpcCaller = rpcCaller;
         }
+
+        public override string ToString()
+        {
+            return $"{RpcName}|{RpcTarget.ToString()}|{RpcCaller.ToString()}";
+        }
     }
 }

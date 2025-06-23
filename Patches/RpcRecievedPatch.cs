@@ -1,5 +1,4 @@
 ﻿using AirlockAPI.Data;
-using AirlockAPI.Managers;
 using HarmonyLib;
 using Il2CppFusion;
 using Il2CppInterop.Runtime.InteropTypes.Arrays;
@@ -10,7 +9,7 @@ using static AirlockAPI.Managers.NetworkManager;
 namespace AirlockAPI.Patches
 {
     [HarmonyPatch(typeof(NetworkRunner), nameof(NetworkRunner.Fusion_Simulation_ICallbacks_OnReliableData))]
-    internal class RpcRecievedPatch
+    internal static class RpcRecievedPatch
     {
         public static void Prefix(NetworkRunner __instance, PlayerRef player, Il2CppStructArray<byte> dataArray)
         {
@@ -66,7 +65,7 @@ namespace AirlockAPI.Patches
                             break;
 
                         default:
-                            throw new InvalidOperationException($"Unknown tag {tag}");
+                            throw new InvalidOperationException($"Unknown tag: {tag}");
                     }
                 }
 
