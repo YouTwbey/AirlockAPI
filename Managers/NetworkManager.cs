@@ -2,11 +2,13 @@
 using AirlockAPI.Data;
 using AirlockAPI.Patches;
 using Il2CppFusion;
+using Il2CppSG.Airlock;
 using Il2CppSG.Airlock.Network;
 using Il2CppSG.CoreLite;
 using System.Reflection;
 using System.Text;
 using UnityEngine;
+using static MelonLoader.MelonLogger;
 
 namespace AirlockAPI.Managers
 {
@@ -65,6 +67,26 @@ namespace AirlockAPI.Managers
         public static void SendRpc(string rpc, int targetPlayer = -1, params object[] param)
         {
             ProcessSendingRpc(rpc, targetPlayer, param);
+        }
+
+        public static double GetPing()
+        {
+            if (Network)
+            {
+                return Network.Simulation.GetPlayerRtt(Network.LocalPlayer);
+            }
+
+            return 0;
+        }
+
+        public static double GetPing(PlayerState player)
+        {
+            if (Network)
+            {
+                return Network.Simulation.GetPlayerRtt(player.PlayerId);
+            }
+
+            return 0;
         }
 
         internal static void ProcessSendingRpc(string rpc, int targetPlayer = -1, params object[] param)

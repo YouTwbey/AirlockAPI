@@ -9,7 +9,7 @@ using static AirlockAPI.Managers.NetworkManager;
 namespace AirlockAPI.Patches
 {
     [HarmonyPatch(typeof(NetworkRunner), nameof(NetworkRunner.Fusion_Simulation_ICallbacks_OnReliableData))]
-    internal static class RpcRecievedPatch
+    public static class RpcRecievedPatch
     {
         public static void Prefix(NetworkRunner __instance, PlayerRef player, Il2CppStructArray<byte> dataArray)
         {

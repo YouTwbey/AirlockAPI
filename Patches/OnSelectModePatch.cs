@@ -7,7 +7,7 @@ using HarmonyLib;
 namespace AirlockAPI.Patches
 {
     [HarmonyPatch(typeof(GamemodeSelectionMenu), nameof(GamemodeSelectionMenu.OnModeSelect))]
-    internal static class OnModeSelectPatch
+    public static class OnModeSelectPatch
     {
         public static void Prefix(GamemodeSelectionMenu __instance, MapModeSelect modeSelect)
         {
@@ -31,7 +31,7 @@ namespace AirlockAPI.Patches
                 __instance._startButton._isDisabled = false;
             }
 
-            Logging.Debug_Log("Mode: " + CurrentMode.Name + " | Modded Gamemode: " + CurrentMode.Modded);
+            Logging.Log("Mode: " + CurrentMode.Name + " | Modded Gamemode: " + CurrentMode.Modded);
         }
     }
 }

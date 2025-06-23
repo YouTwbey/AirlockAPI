@@ -5,9 +5,9 @@ using System.Reflection;
 
 namespace AirlockAPI.Main
 {
-    internal class Loader : MelonPlugin
+    internal class Loader : MelonMod
     {
-        public override void OnApplicationStarted() 
+        public override void OnLateInitializeMelon()
         {
             MelonBase[] melons = MelonBase.RegisteredMelons.ToArray();
 
