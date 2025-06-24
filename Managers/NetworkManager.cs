@@ -8,7 +8,6 @@ using Il2CppSG.CoreLite;
 using System.Reflection;
 using System.Text;
 using UnityEngine;
-using static MelonLoader.MelonLogger;
 
 namespace AirlockAPI.Managers
 {
@@ -187,11 +186,11 @@ namespace AirlockAPI.Managers
 
         internal static void OnRecievedRpc(string rpc, int sender, params object[] args)
         {
-            AirlockRpc airlockRpc = StringToAirlockRpc[rpc];
+            if (!StringToAirlockRpc.TryGetValue(rpc, out AirlockRpc airlockRpc)) return;
 
             if (airlockRpc != null)
             {
-                MethodBase method = RegisteredRpcs[airlockRpc];
+                if (!RegisteredRpcs.TryGetValue(airlockRpc, out MethodBase method)) return;
 
                 if (method != null)
                 {
@@ -201,24 +200,28 @@ namespace AirlockAPI.Managers
                     {
                         if (host != sender) return;
                     }
-
-                    if (args[args.Length - 1] is AirlockRpcInfo) { } else
+                    
+                    if (args.Length != 0)
                     {
-                        ParameterInfo[] param = method.GetParameters();
-
-                        if (param.Last() != null)
+                        if (args[args.Length - 1] is AirlockRpcInfo) { }
+                        else
                         {
-                            if (param.Last().ParameterType == typeof(AirlockRpcInfo))
-                            {
-                                AirlockRpcInfo rpcInfo = new AirlockRpcInfo()
-                                {
-                                    Rpc = rpc,
-                                    Target = airlockRpc.RpcTarget,
-                                    Caller = airlockRpc.RpcCaller,
-                                    Sender = sender
-                                };
+                            ParameterInfo[] param = method.GetParameters();
 
-                                args = args.Append(rpcInfo).ToArray();
+                            if (param.Last() != null)
+                            {
+                                if (param.Last().ParameterType == typeof(AirlockRpcInfo))
+                                {
+                                    AirlockRpcInfo rpcInfo = new AirlockRpcInfo()
+                                    {
+                                        Rpc = rpc,
+                                        Target = airlockRpc.RpcTarget,
+                                        Caller = airlockRpc.RpcCaller,
+                                        Sender = sender
+                                    };
+
+                                    args = args.Append(rpcInfo).ToArray();
+                                }
                             }
                         }
                     }

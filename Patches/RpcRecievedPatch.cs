@@ -5,6 +5,8 @@ using Il2CppInterop.Runtime.InteropTypes.Arrays;
 using System.Text;
 using UnityEngine;
 using static AirlockAPI.Managers.NetworkManager;
+using static UnityEngine.Object;
+using Il2CppSG.Airlock.Network;
 
 namespace AirlockAPI.Patches
 {
@@ -13,6 +15,16 @@ namespace AirlockAPI.Patches
     {
         public static void Prefix(NetworkRunner __instance, PlayerRef player, Il2CppStructArray<byte> dataArray)
         {
+            if (Network == null)
+            {
+                Network = FindObjectOfType<AirlockNetworkRunner>();
+
+                if (Network == null)
+                {
+                    return;
+                }
+            }
+
             using (var ms = new MemoryStream(dataArray))
             using (var reader = new BinaryReader(ms, Encoding.UTF8))
             {
